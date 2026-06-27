@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Separator } from '@/components/ui/separator'
@@ -10,7 +10,7 @@ import { StatsCards } from '@/components/dashboard/StatsCards'
 import { SubscriptionRow } from '@/components/dashboard/SubscriptionRow'
 import { SORTED_MOCK_SUBSCRIPTIONS, type Subscription } from '@/lib/mock-data'
 
-export default function DashboardPage() {
+function DashboardContent() {
   const searchParams = useSearchParams()
   const isDemo = searchParams.get('demo') === 'true'
 
@@ -53,6 +53,7 @@ export default function DashboardPage() {
       <div className="max-w-4xl mx-auto px-6 py-10">
         <DashboardHeader />
 
+
         <div className="flex flex-col gap-6 mt-8">
           <ScanCard onScan={runScan} scanning={scanning} />
 
@@ -82,5 +83,13 @@ export default function DashboardPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <DashboardContent />
+    </Suspense>
   )
 }
