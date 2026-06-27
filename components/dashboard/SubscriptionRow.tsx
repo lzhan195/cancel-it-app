@@ -69,12 +69,12 @@ export function SubscriptionRow({ subscription: sub }: Props) {
 
   return (
     <>
-      <Card className="border-zinc-200">
+      <Card className="border-zinc-200 shadow-sm">
         <CardContent className="flex items-center justify-between gap-4 py-4 px-5">
           <div className="flex flex-col gap-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-sm font-medium text-zinc-900">{sub.merchant}</span>
-              <Badge variant="secondary" className="text-xs font-normal text-zinc-500 border-zinc-200">
+              <Badge variant="secondary" className="text-xs font-normal text-zinc-600 border-zinc-200">
                 {sub.category}
               </Badge>
               {sub.isFreeTrial && daysLeft !== null && (
@@ -83,7 +83,7 @@ export function SubscriptionRow({ subscription: sub }: Props) {
                 </Badge>
               )}
             </div>
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-zinc-600">
               ${sub.amount}/{sub.cadence} &middot; ${sub.annualCost.toLocaleString()}/yr
             </p>
           </div>
@@ -92,7 +92,7 @@ export function SubscriptionRow({ subscription: sub }: Props) {
             {cancelled || guarded ? (
               <Badge
                 variant="secondary"
-                className="text-xs font-normal text-zinc-500 cursor-pointer border-zinc-200"
+                className="text-xs font-normal text-zinc-600 cursor-pointer border-zinc-200"
                 onClick={cancelled ? handlePreview : undefined}
               >
                 {cancelled ? 'Sent via Resend' : 'Reminder set'}

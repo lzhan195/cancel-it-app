@@ -21,7 +21,7 @@ export function DashboardHeader() {
               <TooltipTrigger asChild>
                 <span
                   className={`w-2 h-2 rounded-full cursor-default ${
-                    s.live ? 'bg-emerald-500' : 'bg-zinc-300'
+                    s.live ? 'bg-emerald-600' : 'bg-zinc-400'
                   }`}
                 />
               </TooltipTrigger>

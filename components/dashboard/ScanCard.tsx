@@ -38,7 +38,7 @@ export function ScanCard({ onScan, scanning }: Props) {
   const [email, setEmail] = useState('')
 
   return (
-    <Card className="border-zinc-200">
+    <Card className="border-zinc-200 shadow-sm">
       <CardHeader className="pb-3">
         <CardTitle className="text-sm font-medium text-zinc-900">Scan a statement</CardTitle>
       </CardHeader>
@@ -47,7 +47,7 @@ export function ScanCard({ onScan, scanning }: Props) {
           value={statement}
           onChange={(e) => setStatement(e.target.value)}
           placeholder="Paste your bank or credit card statement here…"
-          className="font-mono text-xs h-40 resize-none bg-zinc-50 border-zinc-200 placeholder:text-zinc-500"
+          className="font-mono text-xs h-40 resize-none bg-white border-zinc-200 placeholder:text-zinc-500 text-zinc-900"
         />
       </CardContent>
       <CardFooter className="flex items-center justify-between gap-3 pt-0 flex-wrap">

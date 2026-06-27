@@ -41,32 +41,32 @@ export function StatsCards({ subscriptions }: Props) {
   return (
     <div className="flex flex-col gap-3">
       <div className="grid grid-cols-3 gap-3">
-        <Card className="border-zinc-200">
+        <Card className="border-zinc-200 shadow-sm">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-emerald-600">
               ${animatedTotal.toLocaleString()}
             </p>
-            <p className="text-sm text-zinc-500 mt-1">wasted per year</p>
+            <p className="text-sm text-zinc-600 mt-1">wasted per year</p>
           </CardContent>
         </Card>
-        <Card className="border-zinc-200">
+        <Card className="border-zinc-200 shadow-sm">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-zinc-900">{subCount}</p>
-            <p className="text-sm text-zinc-500 mt-1">subscriptions</p>
+            <p className="text-sm text-zinc-600 mt-1">subscriptions</p>
           </CardContent>
         </Card>
-        <Card className="border-zinc-200">
+        <Card className="border-zinc-200 shadow-sm">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-amber-600">{trialCount}</p>
-            <p className="text-sm text-zinc-500 mt-1">trials about to bill you</p>
+            <p className="text-sm text-zinc-600 mt-1">trials about to bill you</p>
           </CardContent>
         </Card>
       </div>
       <div className="flex items-center gap-2">
-        <Badge variant="secondary" className="text-xs text-zinc-400 font-normal">
+        <Badge variant="secondary" className="text-xs text-zinc-600 font-normal">
           Parsed by Claude
         </Badge>
-        <Badge variant="secondary" className="text-xs text-zinc-400 font-normal">
+        <Badge variant="secondary" className="text-xs text-zinc-600 font-normal">
           Saved to Supabase
         </Badge>
       </div>

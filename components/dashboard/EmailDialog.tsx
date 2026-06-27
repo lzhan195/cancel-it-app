@@ -45,7 +45,7 @@ export function EmailDialog({ subscription, sent, open, onOpenChange }: Props) {
             </p>
           </div>
           <div
-            className="border border-zinc-200 rounded-md p-4 text-sm text-zinc-700 bg-white overflow-auto max-h-64"
+            className="border border-zinc-200 rounded-md p-4 text-sm text-zinc-800 bg-white overflow-auto max-h-64"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

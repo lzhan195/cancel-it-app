@@ -7,17 +7,17 @@ import { FileText, TrendingDown, XCircle } from 'lucide-react'
 export default function LandingPage() {
   const steps = [
     {
-      icon: <FileText className="w-5 h-5 text-zinc-400" />,
+      icon: <FileText className="w-5 h-5 text-zinc-600" />,
       title: 'Paste',
       description: 'Drop in your bank or credit card statement.',
     },
     {
-      icon: <TrendingDown className="w-5 h-5 text-zinc-400" />,
+      icon: <TrendingDown className="w-5 h-5 text-zinc-600" />,
       title: 'See the leak',
       description: 'Claude finds every recurring charge you forgot about.',
     },
     {
-      icon: <XCircle className="w-5 h-5 text-zinc-400" />,
+      icon: <XCircle className="w-5 h-5 text-zinc-600" />,
       title: 'Cancel',
       description: 'One click drafts the cancellation email. Done.',
     },
@@ -26,7 +26,7 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
       <div className="w-full max-w-2xl flex flex-col items-center text-center gap-6">
-        <Badge variant="secondary" className="text-xs font-medium text-zinc-500 border border-zinc-200">
+        <Badge variant="secondary" className="text-xs font-medium text-zinc-600 border border-zinc-200">
           Built in NYC
         </Badge>
 
@@ -34,15 +34,15 @@ export default function LandingPage() {
           Stop paying for subscriptions you forgot.
         </h1>
 
-        <p className="text-lg text-zinc-500 text-pretty max-w-md">
+        <p className="text-lg text-zinc-600 text-pretty max-w-md">
           Paste your bank statement. We find every recurring charge draining your account.
         </p>
 
         <div className="flex items-center gap-3 mt-2">
-          <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+          <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
             <Link href="/dashboard">Scan my statement</Link>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="text-zinc-600">
+          <Button asChild variant="outline" size="lg">
             <Link href="/dashboard?demo=true">Try the demo</Link>
           </Button>
         </div>
