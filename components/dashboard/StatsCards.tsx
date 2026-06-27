@@ -41,7 +41,7 @@ export function StatsCards({ subscriptions }: Props) {
   return (
     <div className="flex flex-col gap-3">
       <div className="grid grid-cols-3 gap-3">
-        <Card className="shadow-sm">
+        <Card className="border-zinc-200">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-emerald-600">
               ${animatedTotal.toLocaleString()}
@@ -49,13 +49,13 @@ export function StatsCards({ subscriptions }: Props) {
             <p className="text-sm text-zinc-500 mt-1">wasted per year</p>
           </CardContent>
         </Card>
-        <Card className="shadow-sm">
+        <Card className="border-zinc-200">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-zinc-900">{subCount}</p>
             <p className="text-sm text-zinc-500 mt-1">subscriptions</p>
           </CardContent>
         </Card>
-        <Card className="shadow-sm">
+        <Card className="border-zinc-200">
           <CardContent className="pt-6 pb-5">
             <p className="text-5xl font-bold tabular-nums text-amber-600">{trialCount}</p>
             <p className="text-sm text-zinc-500 mt-1">trials about to bill you</p>

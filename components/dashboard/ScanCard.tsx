@@ -38,7 +38,7 @@ export function ScanCard({ onScan, scanning }: Props) {
   const [email, setEmail] = useState('')
 
   return (
-    <Card className="shadow-sm">
+    <Card className="border-zinc-200">
       <CardHeader className="pb-3">
         <CardTitle className="text-sm font-medium text-zinc-900">Scan a statement</CardTitle>
       </CardHeader>
@@ -47,14 +47,14 @@ export function ScanCard({ onScan, scanning }: Props) {
           value={statement}
           onChange={(e) => setStatement(e.target.value)}
           placeholder="Paste your bank or credit card statement here…"
-          className="font-mono text-xs h-40 resize-none bg-zinc-50 placeholder:text-zinc-400"
+          className="font-mono text-xs h-40 resize-none bg-zinc-50 border-zinc-200 placeholder:text-zinc-500"
         />
       </CardContent>
       <CardFooter className="flex items-center justify-between gap-3 pt-0 flex-wrap">
         <div className="flex items-center gap-2">
           <Button
             size="sm"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="bg-emerald-600 hover:bg-emerald-700"
             disabled={scanning || !statement.trim()}
             onClick={() => onScan(statement)}
           >
@@ -64,6 +64,7 @@ export function ScanCard({ onScan, scanning }: Props) {
             variant="outline"
             size="sm"
             onClick={() => setStatement(SAMPLE_STATEMENT)}
+            className="border-zinc-200"
           >
             Try a sample
           </Button>
@@ -72,7 +73,7 @@ export function ScanCard({ onScan, scanning }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Send actions to"
-          className="text-xs h-8 w-48"
+          className="text-xs h-8 w-48 border-zinc-200"
         />
       </CardFooter>
     </Card>

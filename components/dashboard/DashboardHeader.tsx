@@ -31,7 +31,7 @@ export function DashboardHeader() {
             </Tooltip>
           ))}
         </div>
-        <span className="text-xs text-zinc-400">demo@cancel-it.app</span>
+        <span className="text-xs text-zinc-500">demo@cancel-it.app</span>
       </div>
     </header>
   )

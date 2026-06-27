@@ -49,10 +49,10 @@ export default function LandingPage() {
 
         <div className="w-full mt-12 grid grid-cols-3 gap-4">
           {steps.map((step) => (
-            <Card key={step.title} className="border-0 shadow-none bg-transparent">
+            <Card key={step.title} className="border-0 bg-transparent">
               <CardContent className="flex flex-col items-center gap-2 pt-6 text-center">
                 <div className="mb-1">{step.icon}</div>
-                <p className="text-sm font-medium text-zinc-800">{step.title}</p>
+                <p className="text-sm font-medium text-zinc-900">{step.title}</p>
                 <p className="text-sm text-zinc-500 leading-relaxed">{step.description}</p>
               </CardContent>
             </Card>

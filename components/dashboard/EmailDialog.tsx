@@ -35,17 +35,17 @@ export function EmailDialog({ subscription, sent, open, onOpenChange }: Props) {
         </DialogHeader>
         <div className="flex flex-col gap-3 mt-1">
           <div className="flex flex-col gap-0.5">
-            <p className="text-xs text-zinc-400">To</p>
-            <p className="text-sm text-zinc-700">{subscription.cancelEmailGuess}</p>
+            <p className="text-xs text-zinc-500">To</p>
+            <p className="text-sm text-zinc-900">{subscription.cancelEmailGuess}</p>
           </div>
           <div className="flex flex-col gap-0.5">
-            <p className="text-xs text-zinc-400">Subject</p>
-            <p className="text-sm text-zinc-700">
+            <p className="text-xs text-zinc-500">Subject</p>
+            <p className="text-sm text-zinc-900">
               Cancellation Request — {subscription.merchant} Subscription
             </p>
           </div>
           <div
-            className="border border-zinc-200 rounded-md p-4 text-sm text-zinc-700 bg-zinc-50 overflow-auto max-h-64"
+            className="border border-zinc-200 rounded-md p-4 text-sm text-zinc-700 bg-white overflow-auto max-h-64"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
